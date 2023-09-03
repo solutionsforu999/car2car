@@ -5,7 +5,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 export const getCars = createAsyncThunk('getCars', async (params) => {
     // `https://cars-data3.p.rapidapi.com/cars-data?limit=${params[0]}&skip=${params[1]}`
-    const res = await fetch(`http://localhost:4000/getCars?limit=${params[0]}&skip=${params[1]}`, {
+    const res = await fetch(`https://car2car-express-server.vercel.app/getCars?limit=${params[0]}&skip=${params[1]}`, {
         method: 'get',
         // headers: {
         //     'X-RapidAPI-Key': '9213b9aa7emsh8137df15af8853bp1b7cdajsn57fcb4e947f3',

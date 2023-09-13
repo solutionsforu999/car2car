@@ -7,6 +7,9 @@ export const getCars = createAsyncThunk('getCars', async (params) => {
     // `https://cars-data3.p.rapidapi.com/cars-data?limit=${params[0]}&skip=${params[1]}`
     const res = await fetch(`https://car2car-express-server.vercel.app/getCars?limit=${params[0]}&skip=${params[1]}`, {
         method: 'get',
+        headers:{
+             'Access-Control-Allow-Origin': 'https://car2car.vercel.app'
+        }
         // headers: {
         //     'X-RapidAPI-Key': '9213b9aa7emsh8137df15af8853bp1b7cdajsn57fcb4e947f3',
         //     'X-RapidAPI-Host': 'cars-data3.p.rapidapi.com'
